@@ -1,0 +1,5 @@
+.widget_oauth_twitter_widget{ text-align: left; padding: 15px 0px 0px; list-style:none; }
+.oauth-twitter-tweet{ font-style: italic; margin-bottom: 15px; }
+#oauth-twitter-widget-icon, #oauth-twitter-widget-pic{ float: left; border: 0px; margin-right: 5px; }
+#oauth-twitter-follow-link{ text-align: right; text-transform: uppercase; letter-spacing: 1px; font: 7pt/15pt arial; }
+.oauth-twitter-tweet-time{ font: 9pt/12pt arial; color: #999999; margin-bottom: 10px; }
