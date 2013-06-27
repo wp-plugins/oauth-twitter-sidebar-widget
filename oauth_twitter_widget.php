@@ -31,21 +31,22 @@ class oauth_twitter_widget extends WP_Widget {
 		$showProfilePicTF = $instance['showProfilePicTF'];
 		$showTweetTimeTF = $instance['showTweetTimeTF'];
 		$widgetTitle = stripslashes(quot($instance['widgetTitle']));
+		$widgetFooter = stripslashes(quot($instance['widgetFooter']));
 		$includeRepliesTF = $instance['includeRepliesTF'];
-    $oAuthAccessToken = $instance['oAuthAccessToken'];
-    $oAuthAccessTokenSecret = $instance['oAuthAccessTokenSecret'];
-    $consumerKey = $instance['consumerKey'];
-    $consumerSecret = $instance['consumerSecret'];
+		$oAuthAccessToken = $instance['oAuthAccessToken'];
+		$oAuthAccessTokenSecret = $instance['oAuthAccessTokenSecret'];
+		$consumerKey = $instance['consumerKey'];
+		$consumerSecret = $instance['consumerSecret'];
 	?>
 		<p>
 			<label for="<?php echo $this->get_field_id('user'); ?>" style="line-height:35px;display:block;">Twitter user: @<input type="text" size="12" id="<?php echo $this->get_field_id('user'); ?>" name="<?php echo $this->get_field_name('user'); ?>" value="<?php echo $username; ?>" /></label>
 			<label for="<?php echo $this->get_field_id('count'); ?>" style="line-height:35px;display:block;">Show <input type="text" id="<?php echo $this->get_field_id('count'); ?>" size="2" name="<?php echo $this->get_field_name('count'); ?>" value="<?php echo $updateCount; ?>" /> twitter updates</label>
 			<label for="<?php echo $this->get_field_id('widgetTitle'); ?>" style="line-height:35px;display:block;">Widget title: <input type="text" id="<?php echo $this->get_field_id('widgetTitle'); ?>" size="16" name="<?php echo $this->get_field_name('widgetTitle'); ?>" value="<?php echo $widgetTitle; ?>" /></label>
-
-      <label for="<?php echo $this->get_field_id('oAuthAccessToken'); ?>" style="line-height:35px;display:block;">OAuth Access Token: <input type="text" id="<?php echo $this->get_field_id('oAuthAccessToken'); ?>" size="38" name="<?php echo $this->get_field_name('oAuthAccessToken'); ?>" value="<?php echo $oAuthAccessToken; ?>" /></label>
-      <label for="<?php echo $this->get_field_id('oAuthAccessTokenSecret'); ?>" style="line-height:35px;display:block;">Access Token Secret: <input type="text" id="<?php echo $this->get_field_id('oAuthAccessTokenSecret'); ?>" size="38" name="<?php echo $this->get_field_name('oAuthAccessTokenSecret'); ?>" value="<?php echo $oAuthAccessTokenSecret; ?>" /></label>
-      <label for="<?php echo $this->get_field_id('consumerKey'); ?>" style="line-height:35px;display:block;">Consumer Key: <input type="text" id="<?php echo $this->get_field_id('consumerKey'); ?>" size="38" name="<?php echo $this->get_field_name('consumerKey'); ?>" value="<?php echo $consumerKey; ?>" /></label>
-      <label for="<?php echo $this->get_field_id('consumerSecret'); ?>" style="line-height:35px;display:block;">Consumer Secret: <input type="text" id="<?php echo $this->get_field_id('consumerSecret'); ?>" size="38" name="<?php echo $this->get_field_name('consumerSecret'); ?>" value="<?php echo $consumerSecret; ?>" /></label>
+			<label for="<?php echo $this->get_field_id('widgetFooter'); ?>" style="line-height:35px;display:block;">Widget Footer Text: <input type="text" id="<?php echo $this->get_field_id('widgetFooter'); ?>" size="38" name="<?php echo $this->get_field_name('widgetFooter'); ?>" value="<?php echo $widgetFooter; ?>" /></label>
+			<label for="<?php echo $this->get_field_id('oAuthAccessToken'); ?>" style="line-height:35px;display:block;">OAuth Access Token: <input type="text" id="<?php echo $this->get_field_id('oAuthAccessToken'); ?>" size="38" name="<?php echo $this->get_field_name('oAuthAccessToken'); ?>" value="<?php echo $oAuthAccessToken; ?>" /></label>
+			<label for="<?php echo $this->get_field_id('oAuthAccessTokenSecret'); ?>" style="line-height:35px;display:block;">Access Token Secret: <input type="text" id="<?php echo $this->get_field_id('oAuthAccessTokenSecret'); ?>" size="38" name="<?php echo $this->get_field_name('oAuthAccessTokenSecret'); ?>" value="<?php echo $oAuthAccessTokenSecret; ?>" /></label>
+			<label for="<?php echo $this->get_field_id('consumerKey'); ?>" style="line-height:35px;display:block;">Consumer Key: <input type="text" id="<?php echo $this->get_field_id('consumerKey'); ?>" size="38" name="<?php echo $this->get_field_name('consumerKey'); ?>" value="<?php echo $consumerKey; ?>" /></label>
+			<label for="<?php echo $this->get_field_id('consumerSecret'); ?>" style="line-height:35px;display:block;">Consumer Secret: <input type="text" id="<?php echo $this->get_field_id('consumerSecret'); ?>" size="38" name="<?php echo $this->get_field_name('consumerSecret'); ?>" value="<?php echo $consumerSecret; ?>" /></label>
 			<p>&nbsp;</p>
 			<p><input type="radio" id="<?php echo $this->get_field_id('showTwitterIconTF'); ?>" value="icon" name="<?php echo $this->get_field_name('showIconOrPic'); ?>"<?php if($showTwitterIconTF){ ?> checked="checked"<?php } ?>><label for="<?php echo $this->get_field_id('showTwitterIconTF'); ?>"> Show twitter icon</label></p>
 			<p><input type="radio" id="<?php echo $this->get_field_id('showProfilePicTF'); ?>" value="pic" name="<?php echo $this->get_field_name('showIconOrPic'); ?>"<?php if($showProfilePicTF){ ?> checked="checked"<?php } ?>><label for="<?php echo $this->get_field_id('showProfilePicTF'); ?>"> Show profile picture</label></p>
@@ -65,10 +66,11 @@ class oauth_twitter_widget extends WP_Widget {
 		$instance['user'] = esc_html($new_instance['user']);
 		$instance['count'] = esc_html($new_instance['count']);
 		$instance['widgetTitle'] = esc_html( $new_instance['widgetTitle']);
-    $instance['oAuthAccessToken'] = $new_instance['oAuthAccessToken'];
-    $instance['oAuthAccessTokenSecret'] = $new_instance['oAuthAccessTokenSecret'];
-    $instance['consumerKey'] = $new_instance['consumerKey'];
-    $instance['consumerSecret'] = $new_instance['consumerSecret'];
+		$instance['widgetFooter'] = esc_html( $new_instance['widgetFooter']);
+		$instance['oAuthAccessToken'] = $new_instance['oAuthAccessToken'];
+		$instance['oAuthAccessTokenSecret'] = $new_instance['oAuthAccessTokenSecret'];
+		$instance['consumerKey'] = $new_instance['consumerKey'];
+		$instance['consumerSecret'] = $new_instance['consumerSecret'];
 		$instance['showTwitterIconTF'] = false;
 		$instance['showProfilePicTF'] = false;
 		switch( $new_instance['showIconOrPic'] ){
@@ -104,11 +106,12 @@ class oauth_twitter_widget extends WP_Widget {
 		$showTwitterIconTF = $instance['showTwitterIconTF'];
 		$showTweetTimeTF = $instance['showTweetTimeTF'];
 		$title = $instance['widgetTitle'];
+		$footer = $instance['widgetFooter'];
 		$includeRepliesTF = $instance['includeRepliesTF'];
-    $authDetails['oAuthAccessToken'] = $instance['oAuthAccessToken'];
-    $authDetails['oAuthAccessTokenSecret'] = $instance['oAuthAccessTokenSecret'];
-    $authDetails['consumerKey'] = $instance['consumerKey'];
-    $authDetails['consumerSecret'] = $instance['consumerSecret'];
+		$authDetails['oAuthAccessToken'] = $instance['oAuthAccessToken'];
+		$authDetails['oAuthAccessTokenSecret'] = $instance['oAuthAccessTokenSecret'];
+		$authDetails['consumerKey'] = $instance['consumerKey'];
+		$authDetails['consumerSecret'] = $instance['consumerSecret'];
 
 		$jsonFileName = "$username.json";
 		$jsonTempFileName = "$username.json.tmp";
@@ -193,7 +196,9 @@ class oauth_twitter_widget extends WP_Widget {
 			echo "Error fetching feeds. Please verify the twitter settings in the widget.";
 		}
 		//show this no matter what, tweets or no tweets
-		echo "<div id=\"oauth-twitter-follow-link\"><a href=\"http://twitter.com/$username\">follow @$username on twitter</a></div>";
+		if ( !empty( $footer ) ) {
+			echo "<div id=\"oauth-twitter-follow-link\"><a href=\"http://twitter.com/$username\">".apply_filters('widget_title', $footer)."</a></div>";
+		}
 		echo $after_widget;
 	}
 
