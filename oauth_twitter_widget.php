@@ -5,7 +5,7 @@ Plugin URI: http://wordpress.org/plugins/oauth-twitter-sidebar-widget/
 Description: Creates a sidebar widget that displays the latest twitter updates for any user with public tweets. Takes OAuth tokens and is compatible with Twitter API 1.1
 Author: Essence Softwares Solutions
 Email: contact.essence@essencesoftwares.com
-Version: 0.1
+Version: 1.1
 Author URI: http://www.essencesoftwares.com/
 */
 
