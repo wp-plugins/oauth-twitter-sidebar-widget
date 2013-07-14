@@ -1,5 +1,5 @@
 === OAuth twitter sidebar widget ===
-Contributors: Essence Software Solutions
+Contributors: Essence Software Solutions, Sumit Malik
 Donate link: 
 Tags: twitter oauth sidebar, twitter oauth, twitter, twitter widget, twitter sidebar, twitter plugin, oauth twitter widget, oauth twitter, Twitter 1.1 API, Twitter 1.1
 Requires at least: 3.0.0
