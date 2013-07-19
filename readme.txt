@@ -4,7 +4,7 @@ Donate link:
 Tags: twitter oauth sidebar, twitter oauth, twitter, twitter widget, twitter sidebar, twitter plugin, oauth twitter widget, oauth twitter, Twitter 1.1 API, Twitter 1.1
 Requires at least: 3.0.0
 Tested up to: 3.5.2
-Stable tag: 1.1
+Stable tag: 1.2
 
 Display the latest updates for any twitter user in a widget. Automatically embeds links to @users, #hashtags and urls.
 
@@ -32,8 +32,11 @@ who has their tweets set as public. Show up to 20 tweets. Include a link to your
 
 == Change Log ==
 
+= 1.2 =
+* Fixed- "Follow us" link to be open in a new tab.
+
 = 1.1 =
-* Customize your "Follow us" message in widget footer
+* Customize your "Follow us" message in widget footer.
 
 == History ==
 <p>This plugin is designed to work with the new Twitter 1.1 API which needs OAuth tokens to be passed to retrieve user's timelines.</p>
