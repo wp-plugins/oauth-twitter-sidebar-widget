@@ -5,7 +5,7 @@ Plugin URI: http://wordpress.org/plugins/oauth-twitter-sidebar-widget/
 Description: Creates a sidebar widget that displays the latest twitter updates for any user with public tweets. Takes OAuth tokens and is compatible with Twitter API 1.1
 Author: Essence Softwares Solutions, Sumit Malik
 Email: contact.essence@essencesoftwares.com
-Version: 1.3
+Version: 1.4
 Author URI: http://www.essencesoftwares.com/
 */
 
@@ -117,7 +117,7 @@ class oauth_twitter_widget extends WP_Widget {
 		$jsonTempFileName = "$username.json.tmp";
 		$jsonURL = "https://api.twitter.com/1.1/statuses/user_timeline.json";
 
-		//have we fetched twitter data in the last half hour?
+		//have we fetched twitter data in the last half hour
 		if( $this->file_missing_or_old( $jsonFileName, .5 )){
 			//get new data from twitter
 			$jsonData = $this->save_remote_file( $jsonURL, $jsonFileName, $username, $authDetails );

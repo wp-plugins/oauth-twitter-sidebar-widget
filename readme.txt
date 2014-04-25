@@ -32,6 +32,9 @@ who has their tweets set as public. Show up to 20 tweets. Include a link to your
 
 == Change Log ==
 
+= 1.4 =
+* Security updates.
+
 = 1.3 =
 * Some clean up.
 
