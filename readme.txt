@@ -1,10 +1,10 @@
 === OAuth twitter sidebar widget ===
-Contributors: Essence Software Solutions, Sumit Malik
+Contributors: Sumit Malik
 Donate link: 
 Tags: twitter oauth sidebar, twitter oauth, twitter, twitter widget, twitter sidebar, twitter plugin, oauth twitter widget, oauth twitter, Twitter 1.1 API, Twitter 1.1
 Requires at least: 3.0.0
-Tested up to: 3.8
-Stable tag: 1.3
+Tested up to: 4.1
+Stable tag: 1.5
 
 Display the latest updates for any twitter user in a widget. Automatically embeds links to @users, #hashtags and urls.
 
@@ -31,6 +31,9 @@ who has their tweets set as public. Show up to 20 tweets. Include a link to your
 1. Sample output
 
 == Change Log ==
+
+= 1.5 =
+* Security updates.
 
 = 1.4 =
 * Security updates.

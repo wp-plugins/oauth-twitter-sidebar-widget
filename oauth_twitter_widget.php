@@ -3,10 +3,10 @@
 Plugin Name: oAuth twitter sidebar widget
 Plugin URI: http://wordpress.org/plugins/oauth-twitter-sidebar-widget/
 Description: Creates a sidebar widget that displays the latest twitter updates for any user with public tweets. Takes OAuth tokens and is compatible with Twitter API 1.1
-Author: Essence Softwares Solutions, Sumit Malik
-Email: contact.essence@essencesoftwares.com
-Version: 1.4
-Author URI: http://www.essencesoftwares.com/
+Author: Sumit Malik
+Email: smalik@techcraftz.com
+Version: 1.5
+Author URI: http://www.techcraftz.com/
 */
 
 class oauth_twitter_widget extends WP_Widget {
@@ -100,7 +100,7 @@ class oauth_twitter_widget extends WP_Widget {
 		// outputs the content of the widget
 		extract($args, EXTR_SKIP);
 		//default to my twitter name
-		$username = empty($instance['user']) ? "essencesol" : $instance['user'];
+		$username = empty($instance['user']) ? "sumitmalik1983" : $instance['user'];
 		$updateCount = empty($instance['count']) ? 3 : $instance['count'];
 		$showProfilePicTF = $instance['showProfilePicTF'];
 		$showTwitterIconTF = $instance['showTwitterIconTF'];
@@ -125,9 +125,6 @@ class oauth_twitter_widget extends WP_Widget {
 			//already have file, get the data out of it
 			$jsonData = $this->get_json_data_from_file( $jsonFileName );
 		}
-
-		// check for errors--rate limit or curl not installed
-		// data returned will be: {"error":"Rate limit exceeded. Clients may not make more than 150 requests per hour.","request":"\/1\/statuses\/user_timeline.json?screen_name=essencesol&include_entities=true"}
 
 		if( $jsonData == "" || iconv_strlen( $tweets->error, "UTF-8" )){
 			//delete the json file so it will surely be downloaded on next page view
