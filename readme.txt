@@ -3,7 +3,7 @@ Contributors: Sumit Malik
 Donate link: 
 Tags: twitter oauth sidebar, twitter oauth, twitter, twitter widget, twitter sidebar, twitter plugin, oauth twitter widget, oauth twitter, Twitter 1.1 API, Twitter 1.1
 Requires at least: 3.0.0
-Tested up to: 4.1
+Tested up to: 4.2
 Stable tag: 1.5
 
 Display the latest updates for any twitter user in a widget. Automatically embeds links to @users, #hashtags and urls.
